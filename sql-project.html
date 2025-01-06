@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Project</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a class="logo">SQL Project</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="excel-projects.html">Excel Projects</a></li>
+                <li class="active"><a href="sql-project.html">SQL Project</a></li>
+                <li><a href="physics-projects.html">Physics Projects</a></li>
+                <li><a href="python-project.html">Python Project</a></li>
+                <li><a href="tableau-projects.html">Tableau Projects</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/kennethfabela/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+                <li><a href="https://github.com/KennethFabela" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Project Description -->
+            <section class="post">
+                <header class="major">
+                    <h1><a href="https://github.com/KennethFabela/SQL/blob/main/SQL_Data_Cleaning_project.sql" target="_blank">SQL Data Cleaning Project: Layoffs Data</a></h1>
+                    <p>Welcome to my SQL data cleaning project! In this project, I tackled a dataset with over 2,300 records detailing layoffs across various industries. Using MySQL, I imported, cleaned, and standardized the data to ensure its usability and accuracy. Below, you can read more about the challenges I faced, the steps I took, and the tools and techniques I used to achieve my goals.</p>
+                </header>
+                
+                <!-- Image -->
+                <div class="image main">
+                    <a href="https://github.com/KennethFabela/SQL/blob/main/SQL_Data_Cleaning_project.sql" target="_blank">
+                        <img src="images/SQL_Project.png" alt="SQL Project Image" />
+                    </a>
+                    <p><p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/KennethFabela/SQL/blob/main/SQL_Data_Cleaning_project.sql" class="button large">View Project</a></li>
+                    </ul>
+                </div>
+
+        <h2>Objective</h2>
+        <p>Clean and standardize a dataset of 2,361 records detailing layoffs across various industries to ensure data quality and usability.</p>
+
+        <h2>Challenges</h2>
+        <p>
+            <strong>Data Import Issues:</strong> Initially, MySQL only imported 540 of the 2,361 records from a <code>.csv</code> file. After troubleshooting, I resolved this by converting the file to <code>.json</code> format, which allowed all records to be imported successfully.
+        </p>
+
+        <h2>Steps Taken</h2>
+        <ol>
+            <li>
+                <strong>Data Import:</strong>
+                <p>Imported a <code>.json</code> file to successfully include all 2,361 records into the MySQL database.</p>
+            </li>
+            <li>
+                <strong>Data Cleaning:</strong>
+                <ul>
+                    <li><strong>Removing Duplicates:</strong> Identified and deleted duplicate records using a <code>ROW_NUMBER()</code> function with a <code>PARTITION BY</code> clause.</li>
+                    <li><strong>Standardizing Data:</strong>
+                        <ul>
+                            <li>Trimmed unnecessary spaces from text fields.</li>
+                            <li>Standardized industry names (e.g., consolidated variations of "Crypto").</li>
+                            <li>Reformatted date values to a consistent <code>DATE</code> format using <code>STR_TO_DATE</code>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Handling Missing/Null Values:</strong>
+                        <ul>
+                            <li>Identified and replaced missing or blank values where possible by cross-referencing other entries.</li>
+                            <li>Deleted records where critical fields (e.g., <code>total_laid_off</code>, <code>percentage_laid_off</code>) were missing.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Column Optimization:</strong> Dropped unnecessary columns (<code>row_num</code> after deduplication was complete).</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Validation:</strong> Verified data consistency and integrity through targeted queries.
+            </li>
+        </ol>
+
+        <h2>Tools Used</h2>
+        <ul>
+            <li><strong>Database:</strong> MySQL</li>
+            <li><strong>File Formats:</strong> <code>.csv</code> and <code>.json</code></li>
+        </ul>
+
+        <h2>Key SQL Techniques</h2>
+        <ul>
+            <li><code>ROW_NUMBER()</code> with <code>PARTITION BY</code> for deduplication.</li>
+            <li>String functions (<code>TRIM</code>, <code>LIKE</code>) for standardization.</li>
+            <li><code>STR_TO_DATE</code> for date conversion.</li>
+            <li>Joins and subqueries for filling missing values.</li>
+        </ul>
+
+        <h2>Results</h2>
+        <p>
+            Cleaned and standardized a dataset of 2,361 records. Prepared data for further analysis and visualization.
+        </p>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Location</h3>
+                    <p>Modesto, CA</p>
+                </section>
+                <section>
+                    <h3>Phone</h3>
+                    <p><a href="#">(209) 287-9007</a></p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">kennethfabela1@gmail.com</a></p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/kennethfabela/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+                        <li><a href="https://github.com/KennethFabela" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
